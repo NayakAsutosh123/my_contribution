@@ -11,8 +11,7 @@ import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebServlet;
 @SuppressWarnings("serial")
 @WebServlet("/add")
-public class AddBookServlet extends
-GenericServlet{
+public class AddBookServlet extends GenericServlet{
 public BookBean bb=null;
 public void init() throws ServletException{
 bb = new BookBean();//Creating bean object

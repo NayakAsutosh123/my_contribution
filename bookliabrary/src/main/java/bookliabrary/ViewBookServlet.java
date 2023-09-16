@@ -12,8 +12,7 @@ import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebServlet;
 @SuppressWarnings("serial")
 @WebServlet("/view")
-public class ViewBookServlet extends
-GenericServlet{
+public class ViewBookServlet extends GenericServlet{
 public BookDAO ob = null;
 public BookBean bb=null;
 public void init()throws ServletException{
@@ -44,15 +43,12 @@ pw.print("<tr>");
 pw.println("<th>"+"Code"+"</th>"+"<th>"+"Name"+"</th>"+
 "<th>"+"Author"+"</th>"+"<th>"+"Price"+"</th>"+"<th>"+"Quantity"+"</th>");
 pw.print("</tr>");
-Spliterator<BookBean> sp =
-al.spliterator();
+Spliterator<BookBean> sp =al.spliterator();
 sp.forEachRemaining((k)->
 {
 BookBean bb = (BookBean)k;
 pw.print("<tr>");
-pw.println("<td>"+bb.getCode().toUpperCase(
-)+"</td>"+"<td>"+bb.getName().toUpperCase()
-+"</td>"+
+pw.println("<td>"+bb.getCode().toUpperCase()+"</td>"+"<td>"+bb.getName().toUpperCase()+"</td>"+
 "<td>"+bb.getAuthor().toUpperCase()+"</td>"+"<td>"+bb.getPrice()+"</td>"+"<td>"+bb.getQty()+"</td>");
 pw.print("</tr>");
 });
